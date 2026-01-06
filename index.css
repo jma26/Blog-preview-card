@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 800;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: 'Figtree', sans-serif;
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-950);
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%)
+}
+
+main {
+  background-color: var(--yellow);
+  display: flex;
+  min-height: 100dvh;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.blog__article {
+  align-self: center;
+  background-color: var(--white);
+  border: 1px solid var(--gray-950);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 22.5rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.blog__article-header {
+  border-radius: 1rem;
+}
+
+.blog__article-figure, .blog__article-figure-image {
+  border-radius: inherit;
+  height: auto;
+  width: 100%;
+}
+
+.blog__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blog__section > :last-child {
+  margin-top: 1rem;
+}
+
+.blog__badge-wrapper {
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.875rem;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blog__badge-category {
+  background-color: var(--yellow);
+  border-radius: 0.25rem;
+  font-size: inherit;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+}
+
+.blog__badge-date {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.blog__section-headline {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.blog__section-headline:hover {
+  color: var(--yellow);
+}
+
+.blog__section-copy {
+  color: var(--gray-500);
+}
+
+.blog__profile-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.blog__profile-avatar {
+  height: auto;
+  max-width: 2.5rem;
+  width: 100%;
+}
+
+.blog__profile-name {
+  font-weight: 800;
+  font-size: 1.125rem;
+}
